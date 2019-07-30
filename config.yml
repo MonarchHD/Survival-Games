@@ -1,0 +1,140 @@
+#Config for the Hunger Games plugin.
+
+# Configure database credentials and connection pool.
+database:
+  # JDBC Url
+  # Now set to MySQL
+  url: 'jdbc:mysql://127.0.0.1:3306'
+  # Database name
+  name: 'Hungergames'
+  # Database username
+  user: 'root'
+
+  # Database password
+  pass: ''
+
+  # Connections in the pool.
+  threads: 1
+
+#Game Settings
+
+#People needed for the game to start countingdown
+
+player-countdown-minimum: 1
+
+#Timer starting for the game to start. (in Minutes)
+
+countdown-timer: 1
+
+#Permission staff need to log in after game has started.
+
+bypass-login-permission: 'staff.bypass'
+
+#Messages
+#Color codes are supported, go to: https://wiki.ess3.net/mc/ for more information about the color codes.
+
+messages:
+    
+    #Messages when someones logs off while in-game.
+    #Placeholders:
+    #- %player%
+    #- %players_alive%
+    #- %players_maximum%
+    
+    
+    eleminated_By_Leaving: '&e%player% &chas been eliminated.'
+    
+    #Timer has been cancelled, because there were not enough players online.
+    
+    timer_cancelled: '&eThe timer has been cancelled.'
+    
+    #Timer has started to countdown.
+    
+    #Placeholders:
+    #- %time_till_game_start% (in minutes)
+    
+    timer_starting: '&eThe game will start in %time_till_game_start% minutes.'
+    
+    #Timer countdown message
+    #Placeholders:
+    # - %time_till_game%
+    
+    timer_countdown: 'The game will start in %time_till_game%.'
+    
+    #Player connects to the lobbys
+    #Placeholders:
+    #- %player%
+    #- %players_online%
+    #- %players_maximum%
+    
+    player_joins_lobby: '&7&k%player% &r&ehas connected to the lobby &c(&e%players_online%&7/&e%players_maximum%.)'
+    
+    #Game has already started kick message.
+    game-already-started: '&cThis game has already started.'
+    
+    #Announce releasing from cage in 15 seconds message.
+    
+    release_cage_message: '&eYou will be released in 15 seconds.'
+    
+    #Releasing countdown message
+    #Placeholders
+    #- %time_till_release%
+    release_countdown: '&eYou will be released from your cage in %time_till_release%.'
+map:
+    name: Game
+    spawnLocations:
+        '0':
+            x: -138
+            y: 82
+            z: 233
+            float: 0
+            pitch: 0
+            world: 'Game'
+        '1':
+            x: -160
+            y: 82
+            z: 233
+            float: 0
+            pitch: 0
+            world: 'Game'    
+    middlePoint:
+        x: 0
+        y: 60
+        z: 0
+        world: 'Game'
+scoreboard:
+    
+    #The title of scoreboard
+    title: '&eSurvival Games'
+    footer: '&7&m----------------'
+    header: '&7&m----------------'
+    timers:
+    #Placeholders:
+    #- %time%
+        feast: '&bFeast: &f%time%'
+        cage-release: '&eCage release: &f%time%'
+        deathmatch: '&cDeathmatch: &f%time%'
+        game-start: '&cGame start: &f%time%'
+        
+    #Game scoreboard:
+    
+    game:
+    #Remove a line to disable.
+        #Placeholders: 
+        #-%border%
+        border: '&l&bBorder: &f%border%'
+        #Placeholders:
+        #- %players_online%
+        #- %players_maximum%
+        players-left: '&e&lPlayers: &f%players_online%&7/&f%players_maximum%'
+        #Placeholders:
+        #- %kills%
+        kills: '&eKills: &f%kills%'
+        #Placeholders:
+        #-%time-playing%
+        time-playing: '&3Game: &f%time-playing%'
+    lobby:
+        players: '&e&lPlayers: &f%players_online%&7/&f%players_maximum%'
+    
+    
+    
